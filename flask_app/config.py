@@ -1,6 +1,6 @@
 
 class BaseConfig:
-    SECRET_KEY = b'_5#y2L"F4Q8z\n\xec]atmp/'
+    SECRET_KEY = b'_5#y2L"F4Q8z\n\xec]flask_app/'
     DEBUG = False
     TESTING = False
     DATABASE_URI = 'sqlite:///:memory:'
@@ -9,7 +9,7 @@ class BaseConfig:
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost:3306/atmp'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost:3306/flask_app'
     SQLALCHEMY_POOL_SIZE = 30
     SQLALCHEMY_POOL_TIMEOUT = 30            # 30s
     SQLALCHEMY_POOL_RECYCLE = 60 * 60       # 1 hour
@@ -21,7 +21,7 @@ class TestingConfig(DevelopmentConfig):
 
 
 class ProductionConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://autoax:autoax@10.27.12.50:3306/atmp'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@127.0.0.1:3306/flask_app'
     SQLALCHEMY_POOL_SIZE = 30
     SQLALCHEMY_POOL_TIMEOUT = 30            # 30s
     SQLALCHEMY_POOL_RECYCLE = 60 * 60       # 1 hour
