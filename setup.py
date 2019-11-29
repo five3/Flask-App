@@ -18,7 +18,7 @@ setup(
     long_description=get_desc(),
     license="GUN V3",
 
-    url="https://www.github.com/chenxiaowu/hproxy",
+    url="https://github.com/five3/Flask-App",
     author="Xiaowu Chen",
     author_email="five3@163.com",
 
