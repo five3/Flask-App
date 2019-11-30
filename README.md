@@ -9,8 +9,8 @@ pip install Falsk-App
 
 # 使用
 ```bash
-flask createapp app01
-# flask startproject pj01	# for django user
+flask startapp app01
+flask startproject pj01
 ```
 该命令执行完成之后就会在当前目录创建`app01`的目录，其具体结构如下：
 ```bash
