@@ -20,7 +20,7 @@ def config_log():
             },
             'file': {
                 'class': 'logging.FileHandler',
-                'filename': os.path.join(os.path.dirname(__file__), '../log/out.log'),
+                'filename': os.path.join(os.path.dirname(__file__), '../logs/stdout.log'),
                 'level': 'INFO',
                 'formatter': 'default'
             },
