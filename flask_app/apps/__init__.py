@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from .api import init_blue_print
+from .app1 import init_blue_print
 from .utils import config_log
 from flask_app.config import config
 
