@@ -1,0 +1,5 @@
+PyMySQL>=0.9.3
+SQLAlchemy>=1.2.15
+Flask-SQLAlchemy>=2.3.2
+gevent>=1.4.0
+gunicorn>=19.9.0
