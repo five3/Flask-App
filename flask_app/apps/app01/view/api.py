@@ -8,7 +8,7 @@ api = Blueprint('api', __name__, url_prefix='/api')
 def api_index():
     current_app.logger.info(f'{request.method} api.index')
     if request.method == METHODTYPE.GET:
-        data = request.form     # for request that POST with application/x-www-form-urlencoded
+        data = request.args
         return jsonify({"success": True, "name": 'api.index', 'data': data})
     else:
         data = request.json     # for request that POST with application/json
