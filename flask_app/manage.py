@@ -1,8 +1,8 @@
-from app.utils import parse_args, init_env_path
+from apps.utils import parse_args, init_env_path
 
 init_env_path(__file__)
 
-from flask_app.app import create_app
+from flask_app.apps import create_app
 
 __all__ = ['main']
 
