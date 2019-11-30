@@ -42,3 +42,7 @@ def init_env_path(_file_):
     package_dir = os.path.join(os.path.dirname(_file_), '../')
     if os.path.abspath(package_dir) not in sys.path:
         sys.path.insert(0, os.path.join(os.path.dirname(_file_), '../'))
+
+
+def get_abs_dir(_file_):
+    return os.path.abspath(os.path.dirname(_file_))
