@@ -33,7 +33,8 @@ def config_log():
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-port", help="bind port!")
+    parser.add_argument("cmd", help="run app command!")
+    parser.add_argument("-p", "--port", help="bind port!", type=int)
     return parser.parse_args()
 
 

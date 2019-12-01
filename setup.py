@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
+import os
 from setuptools import setup, find_packages
 # python setup.py sdist
 # python setup.py bdist
@@ -10,6 +11,19 @@ from setuptools import setup, find_packages
 def get_desc():
     with open('README.md', 'r', encoding="utf-8") as f:
         return f.read()
+
+
+def find_data_files(root):
+    data_files = []
+    data_files_root = f'{root}/templates'
+    for fl in os.walk(data_files_root):
+        dir, sub_dir, files = fl
+        if dir.endswith('__pycache__'):
+            continue
+        for file in files:
+            data_files.append(f'{dir}/{file}')
+
+    return data_files
 
 
 setup( 
@@ -29,9 +43,7 @@ setup(
     include_package_data=True,
     package_data={'flask_app': ['templates/*']},
     py_modules=[],          # 需要打包的python文件列表
-    data_files=[
-        'flask_app/templates/app_tmpl/__init__.py',
-    ],          # 打包时需要打包的数据文件
+    data_files=find_data_files('flask_app'),          # 打包时需要打包的数据文件
     platforms="any",
     install_requires=[      # 需要安装的依赖包
         'flask>=1.0.2'

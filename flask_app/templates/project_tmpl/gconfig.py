@@ -5,11 +5,12 @@ gevent.monkey.patch_all()
 import multiprocessing
 
 # debug = True
-loglevel = 'info'
 bind = "0.0.0.0:8000"
 pidfile = "app/logs/gunicorn.pid"
 accesslog = "app/logs/gaccess.log"
 errorlog = "app/logs/gdebug.log"
+loglevel = 'info'
+capture_output = True
 daemon = True
 
 # 启动的进程数
