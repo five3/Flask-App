@@ -58,6 +58,8 @@ python manage.py runserver 8000
 ```
 启动完成之后可以执行访问`http://localhost:8000/pj01/`来访问项目的主目录。
 
+在开发完项目之后，上线时可通过执行`startserver.sh`脚本来启动`gunicorn`服务。默认启动的端口号为`8000`，如果需要修改端口号，可在`gconfig.py`文件里修改`bind`字段。
+
 ## 创建单应用的工程
 ```bash
 flask createapp app01
