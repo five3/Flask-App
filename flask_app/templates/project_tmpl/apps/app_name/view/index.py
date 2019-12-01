@@ -1,9 +1,9 @@
 import os
 from flask import Blueprint, current_app, render_template, request
-from flask_app.apps.utils import get_abs_dir
-from flask_app.apps.utils.constants import METHODTYPE
+from {% project_name %}.apps.utils import get_abs_dir
+from {% project_name %}.apps.utils.constants import METHODTYPE
 
-index = Blueprint('index', __name__, url_prefix='/',
+index = Blueprint('index', __name__, url_prefix='/{% app_name %}/',
                   template_folder=os.path.join(get_abs_dir(__file__), '../templates'))
 
 

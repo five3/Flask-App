@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, current_app, request, abort
-from flask_app.apps.utils.constants import METHODTYPE
+from {% project_name %}.apps.utils.constants import METHODTYPE
 
-api = Blueprint('api', __name__, url_prefix='/api')
+api = Blueprint('api', __name__, url_prefix='/{% app_name %}/api')
 
 
 @api.route('/', methods=[METHODTYPE.GET, METHODTYPE.POST])

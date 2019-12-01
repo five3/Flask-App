@@ -1,5 +1,4 @@
 import os
-import sys
 import argparse
 from logging.config import dictConfig
 
@@ -36,12 +35,6 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-port", help="bind port!")
     return parser.parse_args()
-
-
-def init_env_path(_file_):
-    package_dir = os.path.join(os.path.dirname(_file_), '../')
-    if os.path.abspath(package_dir) not in sys.path:
-        sys.path.insert(0, os.path.join(os.path.dirname(_file_), '../'))
 
 
 def get_abs_dir(_file_):

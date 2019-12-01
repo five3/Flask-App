@@ -1,8 +1,8 @@
 import os
 from flask import Flask
-from .app01 import init_blue_print
+from .{% app_name %} import init_blue_print
 from .utils import config_log
-from flask_app.config import config
+from {% project_name %}.config import config
 
 
 def create_app():
