@@ -37,7 +37,7 @@ setup(
     license="GUN V3",
 
     url="https://github.com/five3/Flask-App",
-    author="five3",
+    author="Xiaowu Chen",
     author_email="five3@163.com",
 
     package_dir={'flask_app': 'flask_app'},         # 指定哪些包的文件被映射到哪个源码包
