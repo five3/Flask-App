@@ -2,6 +2,7 @@
 # coding=utf-8
 import os
 from setuptools import setup, find_packages
+from .flask_app import __version__
 # python setup.py sdist
 # python setup.py bdist
 # python setup.py bdist_egg
@@ -28,7 +29,7 @@ def find_data_files(root):
 
 setup( 
     name="Flask_App",
-    version="0.1.0",
+    version=__version__,
     keywords=["Flask", "Falsk App", "Falsk Project"],
     description="create application template for flask.",
     long_description=get_desc(),

@@ -2,6 +2,8 @@ import os
 import shutil
 import argparse
 
+__version__ = '0.1.0'
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
