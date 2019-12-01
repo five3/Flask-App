@@ -2,11 +2,12 @@
 # coding=utf-8
 import os
 from setuptools import setup, find_packages
-from .flask_app import __version__
+from flask_app import __version__
 # python setup.py sdist
 # python setup.py bdist
 # python setup.py bdist_egg
 # python setup.py bdist_wheel
+# twine upload dist/*0.1.4*
 
 
 def get_desc():
@@ -28,15 +29,15 @@ def find_data_files(root):
 
 
 setup( 
-    name="Flask_App",
+    name="Flask-Application",
     version=__version__,
-    keywords=["Flask", "Falsk App", "Falsk Project"],
+    keywords=["Flask", "Flask App", "Flask Project"],
     description="create application template for flask.",
-    long_description=get_desc(),
+    long_description="create application template for flask.",
     license="GUN V3",
 
     url="https://github.com/five3/Flask-App",
-    author="Xiaowu Chen",
+    author="five3",
     author_email="five3@163.com",
 
     package_dir={'flask_app': 'flask_app'},         # 指定哪些包的文件被映射到哪个源码包
