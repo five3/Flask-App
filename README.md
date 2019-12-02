@@ -1,14 +1,24 @@
+![关注二维码](https://www.testqa.cn/static/banner.png)
+
 # 介绍
-Flask-App是专门给Flask提供应用初始化创建的工具，通过该工具可以快速地创建一个Flask的初始项目/应用。
-新创建的项目/应用会包含良好的目录结构和基础的项目配置信息，无需再通过手工的方式创建这些基础目录和文件。
-如果你是`django`用户，那么你一定熟悉`django-admin`。没错！`Flask-App`就是`Flask`版本的`django-admin`。
+`Flask-App`是专门给Flask提供项目初始化的工具，通过该工具可以快速地创建一个`Flask`的初始项目/应用。新创建的项目/应用会包含良好的目录结构和基础的项目配置信息，无需再通过手工的方式创建这些基础目录和文件。
+
+> 如果你是`django`用户，那么你一定熟悉`django-admin`。没错！`Flask-App`就是`Flask`版本的`django-admin`。
 
 # 安装
 ```bash
-pip install Falsk-Application
+pip install Falsk-Application 
 ```
 
-# 使用
+# 快速开始
+```bash
+flask-app startproject demopj
+cd demopj
+python manage.py 8000
+```
+使用你喜欢的浏览器访问`http://localhost:8000/demopj/`，你就可以看到启动好首页。
+
+# 使用说明
 ## 创建多应用的项目
 Flask的多应用项目模板具有以下特点：
 - 基于`blueprint`进行`app`的路由和管理
@@ -17,6 +27,7 @@ Flask的多应用项目模板具有以下特点：
 - 集成了日志配置，通过`current_app.logger`对象直接使用
 - 支持新增`app`
 
+## 创建方式
 ```bash
 flask startproject pj01
 ```
@@ -42,6 +53,7 @@ flask startproject pj01
           |-- utils
                 |-- __init__.py
                 |-- constants.py
+                |-- decorators.py
           |-- __init__.py
     |-- __init__.py
     |-- config.py
@@ -54,11 +66,19 @@ flask startproject pj01
 创建完Flask项目之后，在命令行直接进入到应用的主目录，然后执行启动命令：
 ```bash
 python manage.py 8000
+# or
 python manage.py runserver 8000
 ```
 启动完成之后可以执行访问`http://localhost:8000/pj01/`来访问项目的主目录。
 
-在开发完项目之后，上线时可通过执行`startserver.sh`脚本来启动`gunicorn`服务。默认启动的端口号为`8000`，如果需要修改端口号，可在`gconfig.py`文件里修改`bind`字段。
+## 线上部署
+Flask-App集成了`gunicorn`来作为生成环境的部署方式，后台以`多进程+gevent`的方式提供并发支持,线上部署时使用如下命令：
+```bash
+sh startserver.sh
+```
+默认启动的端口号为`8000`，如果需要修改端口号，可在`gconfig.py`文件里修改`bind`字段。
+
+> 通常在`gunicorn`服务之前还需要添加`nginx`代理服务，除了直接处理静态文件，还同时转发请求给后台的`gunicorn`服务。
 
 ## 创建单应用的工程
 ```bash
@@ -69,8 +89,6 @@ flask createapp app01
 # TODO
 - 支持为多应用项目新增app
 - 支持创建单应用项目
-- 添加RESTfulAPI模板
-- 添加公共装饰器
-- 非flask上下问使用logger
+- 集成RESTfulAPI
 - 集成flask-sqlarchemy
 - sqlarchemy模型自动生成

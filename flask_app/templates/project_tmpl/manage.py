@@ -2,7 +2,7 @@ import os
 import sys
 
 
-def init_env_path(_file_):
+def init_python_path(_file_):
     package_dir = os.path.join(os.path.dirname(_file_), '../')
     abs_path = os.path.abspath(package_dir)
     if abs_path not in sys.path:
@@ -10,7 +10,7 @@ def init_env_path(_file_):
         sys.path.insert(0, abs_path)
 
 
-init_env_path(__file__)
+init_python_path(__file__)
 
 from apps.utils import parse_args
 from apps import create_app
