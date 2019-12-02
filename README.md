@@ -71,3 +71,4 @@ flask createapp app01
 - 支持创建单应用项目
 - 添加RESTfulAPI模板
 - 添加公共装饰器
+- 非flask上下问使用logger
