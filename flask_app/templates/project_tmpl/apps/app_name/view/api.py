@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, current_app, request, abort
 from {% project_name %}.apps.utils.constants import METHODTYPE
+from {% project_name %}.apps.utils.decorators import fixture
 
 api = Blueprint('api', __name__, url_prefix='/{% app_name %}/api')
 
@@ -22,5 +23,13 @@ def api_upload():
         abort(405)
 
     files = request.files       # for request that POST with multipart/form-data's files
+    for file in files:
+        print(file.readline())
     data = request.form         # for request that POST with multipart/form-data's data
     return jsonify({"success": True, "name": 'api.upload', 'data': data, 'files': files})
+
+
+@api.route('/fixture', methods=[METHODTYPE.GET, METHODTYPE.POST])
+@fixture()
+def api_fixture():
+    return {"success": True}
