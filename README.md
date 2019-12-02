@@ -72,3 +72,5 @@ flask createapp app01
 - 添加RESTfulAPI模板
 - 添加公共装饰器
 - 非flask上下问使用logger
+- 集成flask-sqlarchemy
+- sqlarchemy模型自动生成
