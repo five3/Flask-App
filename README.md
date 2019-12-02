@@ -12,11 +12,11 @@ pip install Falsk-Application
 
 # 快速开始
 ```bash
-flask-app startproject demopj
-cd demopj
+flask-app startproject demo_pj
+cd demo_pj
 python manage.py 8000
 ```
-使用你喜欢的浏览器访问`http://localhost:8000/demopj/`，你就可以看到启动好首页。
+使用你喜欢的浏览器访问`http://localhost:8000/demo_pj/`，你就可以看到启动好首页。
 ![hello_flask](https://www.testqa.cn/static/hello_flask.png)
 
 # 使用说明
@@ -30,13 +30,13 @@ Flask的多应用项目模板具有以下特点：
 
 ### 创建方式
 ```bash
-flask startproject pj01
+flask startproject demo_pj
 ```
-该命令执行完成之后就会在当前目录创建`pj01`的项目目录，其具体结构如下：
+该命令执行完成之后就会在当前目录创建`demo_pj`的项目目录，其具体结构如下：
 ```bash
-|-- pj01
+|-- demo_pj
     |-- apps
-          |-- pj01
+          |-- demo_pj
                 |-- controller
                     |-- __init__.py
                 |-- model
@@ -66,11 +66,12 @@ flask startproject pj01
 ```
 创建完Flask项目之后，在命令行直接进入到应用的主目录，然后执行启动命令：
 ```bash
+cd demo_pj
 python manage.py 8000
 # or
 python manage.py runserver 8000
 ```
-启动完成之后可以执行访问`http://localhost:8000/pj01/`来访问项目的主目录。
+启动完成之后可以执行访问`http://localhost:8000/demo_pj/`来访问项目的主目录。
 
 ### 线上部署
 Flask-App集成了`gunicorn`来作为生成环境的部署方式，后台以`多进程+gevent`的方式提供并发支持,线上部署时使用如下命令：
