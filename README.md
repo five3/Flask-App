@@ -5,7 +5,7 @@ Flask-App是专门给Flask提供应用初始化创建的工具，通过该工具
 
 # 安装
 ```bash
-pip install Falsk-App
+pip install Falsk-Application
 ```
 
 # 使用
@@ -69,4 +69,8 @@ flask createapp app01
 # TODO
 - 支持为多应用项目新增app
 - 支持创建单应用项目
-- 添加SQLAlchemy模型模板
+- 添加RESTfulAPI模板
+- 添加公共装饰器
+- 非flask上下问使用logger
+- 集成flask-sqlarchemy
+- sqlarchemy模型自动生成
