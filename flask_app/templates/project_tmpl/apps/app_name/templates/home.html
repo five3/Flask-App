@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <style>
+        .main-header {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: url(/static/bg.jpg) center center;
+            background-size: cover;
+            margin-top: -60px;
+        }
+        .hero-lead {
+            font-size: 6em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ececec;
+            margin-bottom: 50px;
+            text-align: center;
+            padding-top: 130px;
+        }
+    </style>
 </head>
 <body>
-<h2>Hello {{name}}</h2>
+    <div class="main-header">
+        <h1 class="hero-lead">Hello {{name}}</h1>
+    </div>
 </body>
 </html>

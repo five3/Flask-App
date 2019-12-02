@@ -17,10 +17,10 @@ cd demopj
 python manage.py 8000
 ```
 使用你喜欢的浏览器访问`http://localhost:8000/demopj/`，你就可以看到启动好首页。
-
+![hello_flask](https://www.testqa.cn/static/hello_flask.png)
 
 # 使用说明
-## 创建多应用的项目
+## 多应用项目
 Flask的多应用项目模板具有以下特点：
 - 基于`blueprint`进行`app`的路由和管理
 - 每个`app`都会有自己的`mvc`结构和`templates`目录
@@ -28,7 +28,7 @@ Flask的多应用项目模板具有以下特点：
 - 集成了日志配置，通过`current_app.logger`对象直接使用
 - 支持新增`app`
 
-## 创建方式
+### 创建方式
 ```bash
 flask startproject pj01
 ```
@@ -72,7 +72,7 @@ python manage.py runserver 8000
 ```
 启动完成之后可以执行访问`http://localhost:8000/pj01/`来访问项目的主目录。
 
-## 线上部署
+### 线上部署
 Flask-App集成了`gunicorn`来作为生成环境的部署方式，后台以`多进程+gevent`的方式提供并发支持,线上部署时使用如下命令：
 ```bash
 sh startserver.sh
@@ -81,7 +81,7 @@ sh startserver.sh
 
 > 通常在`gunicorn`服务之前还需要添加`nginx`代理服务，除了直接处理静态文件，还同时转发请求给后台的`gunicorn`服务。
 
-## 创建单应用的工程
+## 单应用工程
 ```bash
 flask createapp app01
 ```

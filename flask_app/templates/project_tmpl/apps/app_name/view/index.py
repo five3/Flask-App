@@ -11,7 +11,7 @@ index = Blueprint('index', __name__, url_prefix='/{% app_name %}/',
 def index_home():
     current_app.logger.info(f'{request.method} for index.home')
     if request.method == METHODTYPE.GET:
-        name = request.args.get('name', 'Python')
+        name = request.args.get('name', 'Flask')
         return render_template('home.html', name=name)  # return html Content
     else:
         name = request.form.get('name', 'Python')   # for request that POST with application/x-www-form-urlencoded
