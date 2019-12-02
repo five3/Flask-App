@@ -69,4 +69,4 @@ flask createapp app01
 # TODO
 - 支持为多应用项目新增app
 - 支持创建单应用项目
-- 添加SQLAlchemy模型模板
+- 添加RESTfulAPI模板
