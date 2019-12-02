@@ -1,9 +1,9 @@
 ![关注二维码](https://www.testqa.cn/static/banner.png)
 
-# 介绍
-`Flask-App`是专门给Flask提供项目初始化的工具，通过该工具可以快速地创建一个`Flask`的初始项目/应用。新创建的项目/应用会包含良好的目录结构和基础的项目配置信息，无需再通过手工的方式创建这些基础目录和文件。
-
 > 如果你是`django`用户，那么你一定熟悉`django-admin`。没错！`Flask-App`就是`Flask`版本的`django-admin`。
+
+# 介绍
+`Flask-Application`是专门给`Flask`提供项目初始化的工具，通过该工具可以快速地创建一个`Flask`的初始项目/应用。新创建的项目/应用会包含良好的目录结构和基础的项目配置信息，无需再通过手工的方式创建这些基础目录和文件。
 
 # 安装
 ```bash
