@@ -5,7 +5,7 @@ Flask-App是专门给Flask提供应用初始化创建的工具，通过该工具
 
 # 安装
 ```bash
-pip install Falsk-App
+pip install Falsk-Application
 ```
 
 # 使用
