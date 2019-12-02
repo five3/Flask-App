@@ -6,9 +6,9 @@ import multiprocessing
 
 # debug = True
 bind = "0.0.0.0:8000"
-pidfile = "app/logs/gunicorn.pid"
-accesslog = "app/logs/gaccess.log"
-errorlog = "app/logs/gdebug.log"
+pidfile = "apps/logs/gunicorn.pid"
+accesslog = "apps/logs/gaccess.log"
+errorlog = "apps/logs/gdebug.log"
 loglevel = 'info'
 capture_output = True
 daemon = True
