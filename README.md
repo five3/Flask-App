@@ -70,3 +70,4 @@ flask createapp app01
 - 支持为多应用项目新增app
 - 支持创建单应用项目
 - 添加RESTfulAPI模板
+- 添加公共装饰器
